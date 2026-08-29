@@ -28,33 +28,26 @@
     <link rel="alternate" hreflang="en" href="http://foloe.cn/en/">
     <meta name="generator" content="QibuCore" />
 
-    <!-- 原有样式（保留） -->
     <link rel="stylesheet" type="text/css" href="/default/styles/2.swiper.css" />
     <link rel="stylesheet" type="text/css" href="/default/styles/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/default/styles/animate.css" />
     <link rel="stylesheet" type="text/css" href="/default/styles/default.css" />
     <link rel="stylesheet" type="text/css" href="/cn/styles/style.css" />
 
-    <!-- 新增 Bootstrap 5 CSS (CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- 自定义覆盖：让下拉菜单在悬停时展开（Bootstrap默认是点击） -->
     <style>
-        /* 确保下拉菜单在悬停时显示 */
         .navbar-nav .dropdown:hover .dropdown-menu {
             display: block;
-            margin-top: 0; /* 消除间隙，让悬停更流畅 */
+            margin-top: 0;
         }
-        /* （可选）增加一点动画效果 */
         .dropdown-menu {
             transition: opacity 0.15s ease;
         }
-        /* 调整导航项间距，与原来风格尽量一致 */
         .navbar-nav .nav-link {
             padding-right: 1rem;
             padding-left: 1rem;
         }
-        /* 如果你原来有iconfont图标，保留 */
         .iconfont {
             font-family: 'iconfont' !important;
         }
@@ -116,21 +109,20 @@
                             </ul>
                         </li>
 
-                        <!-- 你可以在这里添加更多菜单项，例如 “联系我们” -->
-                        <!--
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://foloe.cn/careers">招贤纳士</a>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="http://foloe.cn/contact">联系我们</a>
                         </li>
-                        -->
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- 下面是页面其他内容（你原来的header中有一个描述段，可以移到别处） -->
     <div class="container mt-4">
-        <!-- 你原来在header里的描述文字，现在可以放在页面主体 -->
         <p class="lead">上海复乐思仪器有限公司 成立于2021年，专注于单台设备和组件开发，综合多领域技术提供高性价比系统集成解决方案。</p>
         <!-- 其他页面内容... -->
     </div>
