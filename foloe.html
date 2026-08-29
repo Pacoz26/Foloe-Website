@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Foloe</title>
+    <title>Foloe - 上海复乐思仪器有限公司</title>
     <meta name="description" content="上海复乐思仪器有限公司 成立于2021年，专注于单台设备和组件开发，综合多领域技术提供高性价比系统集成解决方案">
     <meta name="keywords" content="关键词">
     <meta http-equiv="Cache-Control" content="no-transform" />
@@ -27,27 +28,117 @@
     <link rel="alternate" hreflang="en" href="http://foloe.cn/en/">
     <meta name="generator" content="QibuCore" />
 
-    <!--
-    <link rel="stylesheet" type="text/css" href="/default/styles/swiper-bundle.min.css" />
-    -->
+    <!-- 原有样式（保留） -->
     <link rel="stylesheet" type="text/css" href="/default/styles/2.swiper.css" />
     <link rel="stylesheet" type="text/css" href="/default/styles/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/default/styles/animate.css" />
     <link rel="stylesheet" type="text/css" href="/default/styles/default.css" />
     <link rel="stylesheet" type="text/css" href="/cn/styles/style.css" />
+
+    <!-- 新增 Bootstrap 5 CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- 自定义覆盖：让下拉菜单在悬停时展开（Bootstrap默认是点击） -->
+    <style>
+        /* 确保下拉菜单在悬停时显示 */
+        .navbar-nav .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0; /* 消除间隙，让悬停更流畅 */
+        }
+        /* （可选）增加一点动画效果 */
+        .dropdown-menu {
+            transition: opacity 0.15s ease;
+        }
+        /* 调整导航项间距，与原来风格尽量一致 */
+        .navbar-nav .nav-link {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+        /* 如果你原来有iconfont图标，保留 */
+        .iconfont {
+            font-family: 'iconfont' !important;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="container">
-                <h1><a href="http://foloe.cn/"><img src="http://foloe.cn/images/logo.png" alt="上海复乐思仪器有限公司"></a></h1>
-                <div class="nav">
-                    <ul>
-                        <li><a href="http://foloe.cn/">首页</a></li>
-                        <li><a href="http://foloe.cn/products/">产品中心</a></li>
-                        <li><a href="http://foloe.cn/about/">关于我们</a></li>
-                        <li><a href="http://foloe.cn/contact/">联系我们</a></li>
+
+    <!-- 使用 Bootstrap 的 Navbar 替代原来的 header 部分 -->
+    <header class="container-fluid bg-white shadow-sm"> <!-- 通栏背景，加阴影突出 -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- 品牌 Logo -->
+                <a class="navbar-brand" href="http://foloe.cn/">
+                    <img src="http://foloe.cn/images/logo.png" alt="上海复乐思仪器有限公司" height="50">
+                </a>
+
+                <!-- 移动端汉堡菜单按钮 -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" 
+                        aria-controls="mainNav" aria-expanded="false" aria-label="切换导航">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 导航项目（可折叠） -->
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <!-- 首页 -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://foloe.cn/" title="首页">首页</a>
+                        </li>
+
+                        <!-- 关于我们（带下拉菜单） -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="http://foloe.cn/about" id="aboutDropdown" 
+                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                关于我们
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                <li><a class="dropdown-item" href="http://foloe.cn/about" title="公司简介">公司简介</a></li>
+                                <li><a class="dropdown-item" href="http://foloe.cn/about/history" title="发展历程">发展历程</a></li>
+                                <li><a class="dropdown-item" href="http://foloe.cn/about/culture" title="企业文化">企业文化</a></li>
+                                <li><a class="dropdown-item" href="http://foloe.cn/about/honor" title="资质荣誉">资质荣誉</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- 产品中心（带下拉菜单） -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="http://foloe.cn/products" id="productDropdown" 
+                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                产品中心
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                                <!-- 注意：PogoPin系列作为父项链接，也可以作为一个菜单项 -->
+                                <li><a class="dropdown-item" href="http://foloe.cn/products" title="PogoPin系列">PogoPin系列</a></li>
+                                <li><hr class="dropdown-divider"></li> <!-- 分割线，可选 -->
+                                <li><a class="dropdown-item" href="http://foloe.cn/products/pogopin-probe-insertion-machine" title="PogoPin探针卡植针机">PogoPin探针卡植针机</a></li>
+                                <li><a class="dropdown-item" href="http://foloe.cn/products/pogopin-probe-assembly-insertion-machine" title="PogoPin探针组装与植针一体机">PogoPin探针组装与植针一体机</a></li>
+                                <li><a class="dropdown-item" href="http://foloe.cn/products/semi-automatic-pogopin-dispensing-assembly-machine" title="半自动PogoPin探针打点组装机">半自动PogoPin探针打点组装机</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- 你可以在这里添加更多菜单项，例如 “联系我们” -->
+                        <!--
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://foloe.cn/contact">联系我们</a>
+                        </li>
+                        -->
                     </ul>
                 </div>
-                <p>上海复乐思仪器有限公司 成立于2021年，专注于单台设备和组件开发，综合多领域技术提供高性价比系统集成解决方案。</p>
+            </div>
+        </nav>
     </header>
+
+    <!-- 下面是页面其他内容（你原来的header中有一个描述段，可以移到别处） -->
+    <div class="container mt-4">
+        <!-- 你原来在header里的描述文字，现在可以放在页面主体 -->
+        <p class="lead">上海复乐思仪器有限公司 成立于2021年，专注于单台设备和组件开发，综合多领域技术提供高性价比系统集成解决方案。</p>
+        <!-- 其他页面内容... -->
+    </div>
+
+    <!-- 引入 Bootstrap 5 JS 依赖（用于移动端折叠和下拉菜单交互） -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 保留你原有的JS库 -->
+    <script src="/default/scripts/swiper-bundle.min.js"></script>
+    <!-- 其他自定义脚本... -->
 </body>
+</html>
