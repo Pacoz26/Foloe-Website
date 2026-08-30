@@ -94,21 +94,52 @@
                         </li>
 
                         <!-- 产品中心（带下拉菜单） -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="http://foloe.cn/products" id="productDropdown" 
-                               role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                产品中心
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="productDropdown">
-                                <!-- 注意：PogoPin系列作为父项链接，也可以作为一个菜单项 -->
-                                <li><a class="dropdown-item" href="http://foloe.cn/products" title="PogoPin系列">PogoPin系列</a></li>
-                                <li><hr class="dropdown-divider"></li> <!-- 分割线，可选 -->
-                                <li><a class="dropdown-item" href="http://foloe.cn/products/pogopin-probe-insertion-machine" title="PogoPin探针卡植针机">PogoPin探针卡植针机</a></li>
-                                <li><a class="dropdown-item" href="http://foloe.cn/products/pogopin-probe-assembly-insertion-machine" title="PogoPin探针组装与植针一体机">PogoPin探针组装与植针一体机</a></li>
-                                <li><a class="dropdown-item" href="http://foloe.cn/products/semi-automatic-pogopin-dispensing-assembly-machine" title="半自动PogoPin探针打点组装机">半自动PogoPin探针打点组装机</a></li>
-                            </ul>
-                        </li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="http://foloe.cn/products" id="productDropdown" 
+       role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        产品中心
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="productDropdown" style="min-width: 280px; padding: 8px 0;">
+        
+        <!-- ====== 1. PogoPin系列 ====== -->
+        <li><a class="dropdown-item fw-bold text-primary" href="http://foloe.cn/products" title="PogoPin系列">PogoPin系列</a></li>
+        <li><a class="dropdown-item ps-4" href="http://foloe.cn/products/pogopin-probe-insertion-machine" title="PogoPin探针卡植针机">— PogoPin探针卡植针机</a></li>
+        <li><a class="dropdown-item ps-4" href="http://foloe.cn/products/pogopin-probe-assembly-insertion-machine" title="PogoPin探针组装与植针一体机">— PogoPin探针组装与植针一体机</a></li>
+        <li><a class="dropdown-item ps-4" href="http://foloe.cn/products/semi-automatic-pogopin-dispensing-assembly-machine" title="半自动PogoPin探针打点组装机">— 半自动PogoPin探针打点组装机</a></li>
+        <li><a class="dropdown-item ps-4" href="http://foloe.cn/products/automatic-pogopin-dispensing-assembly-machine" title="全自动PogoPin探针打点组装机">— 全自动PogoPin探针打点组装机</a></li>
+        
+        <li><hr class="dropdown-divider"></li>
 
+        <!-- ====== 2. 探针检测与量测设备 ====== -->
+        <li><a class="dropdown-item fw-bold text-primary" href="http://foloe.cn/products/probe-test-measure" title="探针检测与量测设备">探针检测与量测设备</a></li>
+        <li><a class="dropdown-item ps-4" href="http://foloe.cn/products/probe-inspection-sorter" title="探针综合检料仪">— 探针综合检料仪</a></li>
+        <li><a class="dropdown-item ps-4" href="http://foloe.cn/products/probe-force-tester" title="全自动探针针压测试仪">— 全自动探针针压测试仪</a></li>
+
+        <li><hr class="dropdown-divider"></li>
+
+        <!-- ====== 3. 半导体封装设备 ====== -->
+        <li><a class="dropdown-item fw-bold text-primary" href="http://foloe.cn/products/semiconductor-packaging" title="半导体封装设备">半导体封装设备</a></li>
+        <li><a class="dropdown-item ps-4" href="http://foloe.cn/products/thermal-compression-bonding-module" title="芯片封装热压贴头焊机模块">— 芯片封装热压贴头焊机模块</a></li>
+
+        <li><hr class="dropdown-divider"></li>
+
+        <!-- ====== 4. 专用控制板卡与软件 ====== -->
+        <li><a class="dropdown-item fw-bold text-primary" href="http://foloe.cn/products/control-boards-software" title="专用控制板卡与软件">专用控制板卡与软件</a></li>
+        <li><a class="dropdown-item ps-4" href="http://foloe.cn/products/multi-axis-motion-controller" title="步进电机多路驱控一体卡">— 步进电机多路驱控一体卡</a></li>
+        <li><a class="dropdown-item ps-4" href="http://foloe.cn/products/multi-channel-ad-da-card" title="多通道AD/DA采集卡">— 多通道AD/DA采集卡</a></li>
+        <li><a class="dropdown-item ps-4" href="http://foloe.cn/products/htol-test-card" title="功率器件高温老化测控卡">— 功率器件高温老化测控卡</a></li>
+        <li><a class="dropdown-item ps-4" href="http://foloe.cn/products/helium-pressure-control-software" title="燃料棒氦压检测控制软件">— 燃料棒氦压检测控制软件</a></li>
+
+        <li><hr class="dropdown-divider"></li>
+
+        <!-- ====== 5. 科学仪器与设备 ====== -->
+        <li><a class="dropdown-item fw-bold text-primary" href="http://foloe.cn/products/scientific-instruments" title="科学仪器与设备">科学仪器与设备</a></li>
+        <li><a class="dropdown-item ps-4" href="http://foloe.cn/products/magnetic-levitation-stiffness-tester" title="磁悬浮转子三维刚度测试仪">— 磁悬浮转子三维刚度测试仪</a></li>
+        <li><a class="dropdown-item ps-4" href="http://foloe.cn/products/micro-nano-3d-metal-printer" title="微纳三维金属加工设备">— 微纳三维金属加工设备</a></li>
+        <li><a class="dropdown-item ps-4" href="http://foloe.cn/products/smart-multi-core-cable-tester" title="智能多芯线缆测试仪">— 智能多芯线缆测试仪</a></li>
+
+    </ul>
+</li>
                         <li class="nav-item">
                             <a class="nav-link" href="http://foloe.cn/careers">招贤纳士</a>
                         </li>
@@ -124,13 +155,11 @@
 
     <div class="container mt-4">
         <p class="lead">上海复乐思仪器有限公司 成立于2021年，专注于单台设备和组件开发，综合多领域技术提供高性价比系统集成解决方案。</p>
-        <!-- 其他页面内容... -->
     </div>
 
     <!-- 引入 Bootstrap 5 JS 依赖（用于移动端折叠和下拉菜单交互） -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- 保留你原有的JS库 -->
     <script src="/default/scripts/swiper-bundle.min.js"></script>
-    <!-- 其他自定义脚本... -->
 </body>
 </html>
