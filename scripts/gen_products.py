@@ -161,6 +161,7 @@ def header(title, keywords, active="products", crumb=""):
     <div class="container">
         <nav class="navbar">
             <a class="logo" href="../index.html">
+                <img src="../images/company_logo.png" alt="上海复乐思仪器有限公司">
                 <span class="brand-text">
                     <span class="cn">上海复乐思仪器有限公司</span>
                     <span class="en">Shanghai Foloe Instrument Co., Ltd.</span>
@@ -170,7 +171,7 @@ def header(title, keywords, active="products", crumb=""):
             <ul class="nav-menu">
                 <li><a href="../index.html">首页</a></li>
                 <li class="has-sub">
-                    <a href="../about.html">关于我们 <span class="caret">▾</span></a>
+                    <a href="../about.html">关于我们</a>
                     <ul class="dropdown">
                         <li><a href="../about.html">公司简介</a></li>
                         <li><a href="../about.html#team">核心团队</a></li>
@@ -179,7 +180,7 @@ def header(title, keywords, active="products", crumb=""):
                     </ul>
                 </li>
                 <li class="has-sub active">
-                    <a href="../products.html">产品中心 <span class="caret">▾</span></a>
+                    <a href="../products.html">产品中心</a>
                     <ul class="dropdown">
                         <li><a class="group" href="../products.html#cat1">智能化高精度加工检测设备</a></li>
                         <li><a href="pogopin-probe-insertion-machine.html">PogoPin探针卡植针机</a></li>
@@ -201,7 +202,7 @@ def header(title, keywords, active="products", crumb=""):
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a href="../news.html">新闻中心 <span class="caret">▾</span></a>
+                    <a href="../news.html">新闻中心</a>
                     <ul class="dropdown">
                         <li><a href="../news.html">企业新闻</a></li>
                         <li><a href="../news.html#industry">行业动态</a></li>

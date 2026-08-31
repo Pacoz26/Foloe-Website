@@ -80,8 +80,8 @@ h1, h2, h3, h4, h5 { color: var(--ink); line-height: 1.3; }
     box-shadow: 0 2px 12px rgba(0, 0, 0, .18);
 }
 .navbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 76px; }
-.navbar .logo { display: flex; align-items: center; margin-left: -90px; }
-.navbar .logo img { height: 46px; }
+.navbar .logo { display: flex; align-items: center; margin-left: -152px; }
+.navbar .logo img { height: 57.5px; }
 .navbar .logo .brand-text { margin-left: 10px; line-height: 1.2; }
 .navbar .logo .brand-text .cn { font-size: 19px; font-weight: 700; color: #fff; }
 .navbar .logo .brand-text .en { font-size: 11px; color: #a9a9a9; letter-spacing: .5px; }
@@ -111,7 +111,6 @@ h1, h2, h3, h4, h5 { color: var(--ink); line-height: 1.3; }
 .nav-menu > li.active > a::after { width: 46px; }
 .nav-menu > li > a:hover,
 .nav-menu > li.active > a { color: #b9e6d0; }
-.nav-menu > li > a .caret { font-size: 12px; margin-left: 4px; }
 
 .dropdown {
     position: absolute;
