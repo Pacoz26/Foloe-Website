@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5 { color: var(--ink); line-height: 1.3; }
 .clearfix::after { content: ""; display: block; clear: both; }
 
 /* ---------- 导航右侧（语言 / 搜索） ---------- */
-.nav-right { display: flex; align-items: center; gap: 14px; flex: 0 0 auto; margin-right: -80px; }
+.nav-right { display: flex; align-items: center; gap: 14px; flex: 0 0 auto; margin-right: -110px; }
 .nav-right .lang { color: #fff; font-weight: 600; white-space: nowrap; }
 .nav-right .lang .cn { color: #b9e6d0; }
 .nav-right .search { display: flex; align-items: center; }
@@ -80,17 +80,17 @@ h1, h2, h3, h4, h5 { color: var(--ink); line-height: 1.3; }
     box-shadow: 0 2px 12px rgba(0, 0, 0, .18);
 }
 .navbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 76px; }
-.navbar .logo { display: flex; align-items: center; margin-left: -60px; }
+.navbar .logo { display: flex; align-items: center; margin-left: -90px; }
 .navbar .logo img { height: 46px; }
 .navbar .logo .brand-text { margin-left: 10px; line-height: 1.2; }
 .navbar .logo .brand-text .cn { font-size: 19px; font-weight: 700; color: #fff; }
 .navbar .logo .brand-text .en { font-size: 11px; color: #a9a9a9; letter-spacing: .5px; }
 
-.nav-menu { display: flex; align-items: center; gap: 0; }
+.nav-menu { display: flex; align-items: center; gap: 40px; }
 .nav-menu > li { position: relative; }
 .nav-menu > li > a {
     display: block;
-    padding: 12px 22px;
+    padding: 12px 0;
     font-size: 16px;
     color: #fff;
     font-weight: 500;
