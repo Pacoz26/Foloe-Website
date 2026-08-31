@@ -247,7 +247,6 @@ def footer():
             <div class="brand">
                 <div class="name">上海复乐思仪器有限公司</div>
                 <p style="color:#b9b9b9;">Shanghai Foloe Instrument Co., Ltd.<br>精密制造 · 智能检测 · 科学仪器</p>
-                <p style="margin-top:12px; font-size:13px;">成立于2021年，专注于单台设备和组件开发，综合多领域技术提供高性价比系统集成解决方案。</p>
             </div>
             <div>
                 <h4>关于我们</h4>
@@ -277,14 +276,14 @@ def footer():
             <div>
                 <h4>联系我们</h4>
                 <ul class="contact">
-                    <li><span class="k">电话</span><span>021-0000-0000</span></li>
-                    <li><span class="k">邮箱</span><span>info@foloe.cn</span></li>
-                    <li><span class="k">地址</span><span>上海市（具体地址待补充）</span></li>
+                    <li><span class="k">电话</span><span>13916754256</span></li>
+                    <li><span class="k">邮箱</span><span>taoxin@foloe.cn</span></li>
+                    <li><span class="k">地址</span><span>上海市青浦区双联路168号复襄公社</span></li>
                 </ul>
             </div>
         </div>
         <div class="bottom">
-            Copyright © 2026 上海复乐思仪器有限公司 All Rights Reserved. | <a href="https://beian.miit.gov.cn/">沪ICP备XXXXXXXX号</a>
+            Copyright © 2026 上海复乐思仪器有限公司 All Rights Reserved. | <a href="https://beian.miit.gov.cn/">沪ICP备2023010105号</a>
         </div>
     </div>
 </footer>

@@ -80,16 +80,3 @@
         });
     });
 })();
-
-// 侧边栏锚点高亮
-(function () {
-    var links = document.querySelectorAll('.side ul li a[href*="#"]');
-    if (!links.length) return;
-    function setActive(id) {
-        links.forEach(function (a) {
-            a.classList.toggle('on', a.getAttribute('href').indexOf(id) !== -1);
-        });
-    }
-    var first = document.querySelector('main [id], .main-col [id]');
-    if (first) setActive(first.id);
-})();
