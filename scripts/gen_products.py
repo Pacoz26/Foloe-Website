@@ -103,16 +103,6 @@ PRODUCTS = [
       ("软件功能", "上位机自动启停，多设备联网监控")],
      ["功率半导体器件可靠性测试", "批次老化筛选与质量验证"]),
 
-    ("helium-pressure-control-software", "燃料棒内氦压无损检测设备控制软件", 2,
-     "实时采集双通道温度数据，配合PLC实现自动化控制，一键启动11步检测流程。",
-     ["p11-helium-1.jpg", "p11-helium-2.jpg", "p11-helium-3.jpg"],
-     [("功能", "燃料棒内部氦气压力检测自动化控制系统"),
-      ("数据采集", "实时采集双通道温度数据，配合PLC自动化控制"),
-      ("自动检测", "一键启动完整的11步检测流程"),
-      ("手动控制", "支持7个独立设备动作的手动触发"),
-      ("数据管理", "测试记录存储、查询、导出")],
-     ["气压检测", "自动化控制"]),
-
     ("magnetic-levitation-stiffness-tester", "磁悬浮转子三维刚度测试仪", 3,
      "定位精度0.01mm，三维力测量±50N，服务人工心脏与磁悬浮轴承测试。",
      ["p12-maglev-1.png", "p12-maglev-2.png"],
@@ -145,7 +135,24 @@ PRODUCTS = [
 ]
 
 
-def header(title, keywords, active="products", crumb=""):
+def products_dropdown(current_key):
+    rows = []
+    for cat_id in (1, 2, 3):
+        rows.append('<li><a class="group" href="../products.html#cat{0}">{1}</a></li>'.format(cat_id, CATS[cat_id]))
+        items = [p for p in PRODUCTS if p[2] == cat_id]
+        shown = items[:2]
+        cur = [p for p in items if p[0] == current_key]
+        if cur and cur[0] not in shown:
+            shown[1] = cur[0]
+        for p in shown:
+            key, name = p[0], p[1]
+            cls = ' class="current"' if key == current_key else ''
+            rows.append('<li><a{0} href="{1}.html">{2}</a></li>'.format(cls, key, name))
+        rows.append('<li><a class="more" href="../products.html#cat{0}">更多...</a></li>'.format(cat_id))
+    return "".join(rows)
+
+
+def header(title, keywords, current_key=None):
     return """<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -174,7 +181,6 @@ def header(title, keywords, active="products", crumb=""):
                     <a href="../about.html">关于我们</a>
                     <ul class="dropdown">
                         <li><a href="../about.html">公司简介</a></li>
-                        <li><a href="../about.html#team">核心团队</a></li>
                         <li><a href="../about.html#tech">核心技术栈</a></li>
                         <li><a href="../about.html#partners">合作伙伴</a></li>
                     </ul>
@@ -182,46 +188,18 @@ def header(title, keywords, active="products", crumb=""):
                 <li class="has-sub active">
                     <a href="../products.html">产品中心</a>
                     <ul class="dropdown">
-                        <li><a class="group" href="../products.html#cat1">智能化高精度加工检测设备</a></li>
-                        <li><a href="pogopin-probe-insertion-machine.html">PogoPin探针卡植针机</a></li>
-                        <li><a href="pogopin-probe-assembly-insertion-machine.html">PogoPin探针组装与植针一体机</a></li>
-                        <li><a href="semi-automatic-pogopin-dispensing-assembly-machine.html">半自动PogoPin探针打点组装机</a></li>
-                        <li><a href="automatic-pogopin-dispensing-assembly-machine.html">全自动PogoPin探针打点组装机</a></li>
-                        <li><a href="probe-inspection-sorter.html">探针综合检料仪</a></li>
-                        <li><a href="thermal-compression-bonding-module.html">芯片封装热压贴头焊机模块</a></li>
-                        <li><a href="probe-force-tester.html">全自动探针针压测试仪</a></li>
-                        <li><a class="group" href="../products.html#cat2">专用控制板卡与工业控制软件</a></li>
-                        <li><a href="multi-axis-motion-controller.html">步进电机多路驱控一体卡</a></li>
-                        <li><a href="multi-channel-ad-da-card.html">多通道AD/DA采集卡</a></li>
-                        <li><a href="htol-test-card.html">IC与功率器件高温老化测控卡</a></li>
-                        <li><a href="helium-pressure-control-software.html">燃料棒内氦压无损检测设备控制软件</a></li>
-                        <li><a class="group" href="../products.html#cat3">科学仪器与设备</a></li>
-                        <li><a href="magnetic-levitation-stiffness-tester.html">磁悬浮转子三维刚度测试仪</a></li>
-                        <li><a href="micro-nano-3d-metal-printer.html">微纳三维金属加工设备</a></li>
-                        <li><a href="smart-multi-core-cable-tester.html">智能多芯线缆测试仪</a></li>
-                    </ul>
-                </li>
-                <li class="has-sub">
-                    <a href="../news.html">新闻中心</a>
-                    <ul class="dropdown">
-                        <li><a href="../news.html">企业新闻</a></li>
-                        <li><a href="../news.html#industry">行业动态</a></li>
-                        <li><a href="../news.html#tech">技术交流</a></li>
+                        {products_dropdown}
                     </ul>
                 </li>
                 <li><a href="../contact.html">联系我们</a></li>
             </ul>
             <div class="nav-right">
                 <span class="lang"><span class="cn">中文</span> | EN</span>
-                <form class="search" action="../search.html" method="get">
-                    <input type="text" name="q" placeholder="产品搜索">
-                    <button type="submit">搜索</button>
-                </form>
             </div>
         </nav>
     </div>
 </header>
-""".format(title=title, keywords=keywords)
+""".format(title=title, keywords=keywords, products_dropdown=products_dropdown(current_key))
 
 
 def banner(name, crumb):
@@ -248,7 +226,6 @@ def footer():
                 <h4>关于我们</h4>
                 <ul>
                     <li><a href="../about.html">公司简介</a></li>
-                    <li><a href="../about.html#team">核心团队</a></li>
                     <li><a href="../about.html#tech">核心技术栈</a></li>
                     <li><a href="../about.html#partners">合作伙伴</a></li>
                 </ul>
@@ -259,14 +236,6 @@ def footer():
                     <li><a href="../products.html#cat1">智能化高精度加工检测设备</a></li>
                     <li><a href="../products.html#cat2">专用控制板卡与工业控制软件</a></li>
                     <li><a href="../products.html#cat3">科学仪器与设备</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>新闻中心</h4>
-                <ul>
-                    <li><a href="../news.html">企业新闻</a></li>
-                    <li><a href="../news.html#industry">行业动态</a></li>
-                    <li><a href="../news.html#tech">技术交流</a></li>
                 </ul>
             </div>
             <div>
@@ -321,7 +290,7 @@ def gen_page(p):
     app_li = "".join('<li>{0}</li>'.format(a) for a in apps)
     crumb = '<a href="../index.html">首页</a> &gt; <a href="../products.html">产品中心</a> &gt; <a href="../products.html#cat{0}">{1}</a> &gt; {2}'.format(cat, cat_name, name)
 
-    html = header(name, name) + banner(name, crumb) + """
+    html = header(name, name, current_key=key) + banner(name, crumb) + """
 <div class="container">
     <div class="page-wrap">
         {side}

@@ -63,20 +63,3 @@
         });
     });
 })();
-
-// 新闻标签切换（首页 / 列表页）
-(function () {
-    var tabs = document.querySelectorAll('.news-tabs button');
-    var items = document.querySelectorAll('.news-list .nl-item[data-cat]');
-    if (!tabs.length) return;
-    tabs.forEach(function (btn, idx) {
-        btn.addEventListener('click', function () {
-            tabs.forEach(function (b) { b.classList.remove('on'); });
-            btn.classList.add('on');
-            var cat = btn.getAttribute('data-cat') || '';
-            items.forEach(function (it) {
-                it.style.display = (!cat || it.getAttribute('data-cat') === cat) ? '' : 'none';
-            });
-        });
-    });
-})();
