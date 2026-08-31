@@ -25,12 +25,12 @@
             <div class="slogan"><b>精密制造 · 智能检测 · 科学仪器</b><span>致力于成为高端智能装备解决方案提供商</span></div>
             <div class="stats">
                 <div class="item"><span class="num">2021</span><span class="unit">年·公司成立</span></div>
-                <div class="item"><span class="num">4</span><span class="unit">大产品线</span></div>
+                <div class="item"><span class="num">3</span><span class="unit">大产品线</span></div>
                 <div class="item"><span class="num">14</span><span class="unit">+核心产品</span></div>
                 <div class="item"><span class="num">2</span><span class="unit">位博士领衔</span></div>
             </div>
             <div class="right">
-                <span class="lang">中文</span>
+                <span class="lang"><span class="cn">中文</span> | EN</span>
                 <form class="search" onsubmit="return false;">
                     <input type="text" placeholder="产品搜索">
                     <button type="submit">搜索</button>
@@ -85,6 +85,14 @@
                             <li><a href="products/smart-multi-core-cable-tester.html">智能多芯线缆测试仪</a></li>
                         </ul>
                     </li>
+                    <li class="has-sub">
+                        <a href="news.html">新闻中心 <span class="caret">▾</span></a>
+                        <ul class="dropdown">
+                            <li><a href="news.html">企业新闻</a></li>
+                            <li><a href="news.html#industry">行业动态</a></li>
+                            <li><a href="news.html#tech">技术交流</a></li>
+                        </ul>
+                    </li>
                     <li><a href="contact.html">联系我们</a></li>
                 </ul>
             </nav>
@@ -94,17 +102,18 @@
     <!-- ===== 首页横幅 ===== -->
     <section class="hero">
         <div class="container">
-            <div class="hero-left">
-                <div class="tagline">SHANGHAI FOLOE INSTRUMENT CO., LTD.</div>
-                <h1>精密制造 <span>|</span> 智能检测 <span>|</span> 科学仪器</h1>
-                <p class="desc">专注于单台设备和组件开发，综合多领域技术提供高性价比系统集成解决方案。以技术创新驱动高端制造，为客户提供精准、可靠、高效的解决方案。</p>
-                <div class="btns">
-                    <a class="btn btn-white" href="products.html">查看产品中心</a>
-                    <a class="btn btn-line" href="about.html">了解我们</a>
-                </div>
+            <div class="tagline">SHANGHAI FOLOE INSTRUMENT CO., LTD.</div>
+            <h1>精密制造 <span>|</span> 智能检测 <span>|</span> 科学仪器</h1>
+            <p class="desc">专注于单台设备和组件开发，综合多领域技术提供高性价比系统集成解决方案。以技术创新驱动高端制造，为客户提供精准、可靠、高效的解决方案。</p>
+            <div class="btns">
+                <a class="btn btn-white" href="products.html">查看产品中心</a>
+                <a class="btn btn-line" href="about.html">了解我们</a>
             </div>
-            <div class="hero-right">
-                <img src="images/company-about.jpg" alt="上海复乐思仪器有限公司">
+            <div class="hero-stats">
+                <div class="hs-item"><div class="hs-num">2021<small>年</small></div><div class="hs-label">公司成立</div></div>
+                <div class="hs-item"><div class="hs-num">3<small>大</small></div><div class="hs-label">产品线</div></div>
+                <div class="hs-item"><div class="hs-num">14<small>+</small></div><div class="hs-label">核心产品</div></div>
+                <div class="hs-item"><div class="hs-num">2<small>位</small></div><div class="hs-label">博士领衔</div></div>
             </div>
         </div>
     </section>
@@ -145,82 +154,68 @@
                 <h2>产品中心</h2>
                 <p>三大产品线 · 十四款核心产品，覆盖加工、检测、控制与科学仪器</p>
             </div>
-            <div class="pro-grid">
-                <div class="pro-card">
-                    <div class="pic"><img src="images/p1-pogopin-insert-1.jpg" alt="PogoPin探针卡植针机"></div>
-                    <div class="body">
-                        <div class="cat">智能化高精度加工检测设备</div>
-                        <h3>PogoPin探针卡植针机</h3>
-                        <p>兼容直径0.2–2mm，装配公差≤0.01mm，1,500 pcs/hr自动化柔性生产。</p>
-                        <a class="more" href="products/pogopin-probe-insertion-machine.html">了解更多 →</a>
-                    </div>
+
+            <div class="cate">
+                <div class="cate-pic">
+                    <img src="images/p1-pogopin-insert-1.jpg" alt="智能化高精度加工检测设备">
+                    <span class="badge">01</span>
                 </div>
-                <div class="pro-card">
-                    <div class="pic"><img src="images/p2-assembly-insert-1.png" alt="PogoPin探针组装与植针一体机"></div>
-                    <div class="body">
-                        <div class="cat">智能化高精度加工检测设备</div>
-                        <h3>PogoPin探针组装与植针一体机</h3>
-                        <p>自动打点、插接、铆合、植针一体化，探针制造全流程自动化。</p>
-                        <a class="more" href="products/pogopin-probe-assembly-insertion-machine.html">了解更多 →</a>
+                <div class="cate-body">
+                    <div class="cat">INTELLIGENT PROCESSING &amp; INSPECTION</div>
+                    <h3>智能化高精度加工检测设备</h3>
+                    <p>聚焦半导体测试探针产业链，提供植针、组装、检料、封装与针压测试等高精度自动化设备，装配公差 ≤ 0.01mm，以机器视觉与精密运动控制实现智能制造。</p>
+                    <div class="links">
+                        <a href="products/pogopin-probe-insertion-machine.html">PogoPin探针卡植针机</a>
+                        <a href="products/pogopin-probe-assembly-insertion-machine.html">探针组装与植针一体机</a>
+                        <a href="products/semi-automatic-pogopin-dispensing-assembly-machine.html">半自动打点组装机</a>
+                        <a href="products/automatic-pogopin-dispensing-assembly-machine.html">全自动打点组装机</a>
+                        <a href="products/probe-inspection-sorter.html">探针综合检料仪</a>
+                        <a href="products/thermal-compression-bonding-module.html">芯片封装热压贴头焊机模块</a>
+                        <a href="products/probe-force-tester.html">全自动探针针压测试仪</a>
                     </div>
-                </div>
-                <div class="pro-card">
-                    <div class="pic"><img src="images/p8-motion-1.png" alt="步进电机多路驱控一体卡"></div>
-                    <div class="body">
-                        <div class="cat">专用控制板卡与工业控制软件</div>
-                        <h3>步进电机多路驱控一体卡</h3>
-                        <p>体积小巧、多路控制、WiFi无线/有线控制，精准调节。</p>
-                        <a class="more" href="products/multi-axis-motion-controller.html">了解更多 →</a>
-                    </div>
-                </div>
-                <div class="pro-card">
-                    <div class="pic"><img src="images/p12-maglev-1.png" alt="磁悬浮转子三维刚度测试仪"></div>
-                    <div class="body">
-                        <div class="cat">科学仪器与设备</div>
-                        <h3>磁悬浮转子三维刚度测试仪</h3>
-                        <p>定位精度0.01mm，三维力测量±50N，服务人工心脏与磁悬浮轴承测试。</p>
-                        <a class="more" href="products/magnetic-levitation-stiffness-tester.html">了解更多 →</a>
-                    </div>
-                </div>
-                <div class="pro-card">
-                    <div class="pic"><img src="images/p5-inspection-1.png" alt="探针综合检料仪"></div>
-                    <div class="body">
-                        <div class="cat">智能化高精度加工检测设备</div>
-                        <h3>探针综合检料仪</h3>
-                        <p>机器视觉自动识别，探针计数+外形质量检测，来料检验与质量控制。</p>
-                        <a class="more" href="products/probe-inspection-sorter.html">了解更多 →</a>
-                    </div>
-                </div>
-                <div class="pro-card">
-                    <div class="pic"><img src="images/p7-force-1.jpg" alt="全自动探针针压测试仪"></div>
-                    <div class="body">
-                        <div class="cat">智能化高精度加工检测设备</div>
-                        <h3>全自动探针针压测试仪</h3>
-                        <p>测力范围0.1–10g、精度±0.01g，三维图形输出与标准检测报告。</p>
-                        <a class="more" href="products/probe-force-tester.html">了解更多 →</a>
-                    </div>
-                </div>
-                <div class="pro-card">
-                    <div class="pic"><img src="images/p13-micronano-1.jpg" alt="微纳三维金属加工设备"></div>
-                    <div class="body">
-                        <div class="cat">科学仪器与设备</div>
-                        <h3>微纳三维金属加工设备</h3>
-                        <p>微米/亚微米级3D增材制造，室温大气环境直接成型，原位加工。</p>
-                        <a class="more" href="products/micro-nano-3d-metal-printer.html">了解更多 →</a>
-                    </div>
-                </div>
-                <div class="pro-card">
-                    <div class="pic"><img src="images/p14-cable.png" alt="智能多芯线缆测试仪"></div>
-                    <div class="body">
-                        <div class="cat">科学仪器与设备</div>
-                        <h3>智能多芯线缆测试仪</h3>
-                        <p>100芯线束快速自动检测，内置100V绝缘耐压测试，图形化报告。</p>
-                        <a class="more" href="products/smart-multi-core-cable-tester.html">了解更多 →</a>
-                    </div>
+                    <a class="btn btn-green" href="products.html#cat1">了解更多</a>
                 </div>
             </div>
-            <div style="text-align:center; margin-top:40px;">
-                <a class="btn btn-white" href="products.html" style="border:1px solid var(--green);">查看全部产品</a>
+
+            <div class="cate rev">
+                <div class="cate-pic">
+                    <img src="images/p8-motion-1.png" alt="专用控制板卡与工业控制软件">
+                    <span class="badge">02</span>
+                </div>
+                <div class="cate-body">
+                    <div class="cat">CONTROL BOARD &amp; INDUSTRIAL SOFTWARE</div>
+                    <h3>专用控制板卡与工业控制软件</h3>
+                    <p>自主研发驱控一体卡、AD/DA 采集卡、老化测控卡等专用板卡，配合工业控制软件，覆盖多通道数据采集、高温老化测控与自动化控制等场景。</p>
+                    <div class="links">
+                        <a href="products/multi-axis-motion-controller.html">步进电机多路驱控一体卡</a>
+                        <a href="products/multi-channel-ad-da-card.html">多通道AD/DA采集卡</a>
+                        <a href="products/htol-test-card.html">IC与功率器件高温老化测控卡</a>
+                        <a href="products/helium-pressure-control-software.html">燃料棒内氦压检测控制软件</a>
+                    </div>
+                    <a class="btn btn-green" href="products.html#cat2">了解更多</a>
+                </div>
+            </div>
+
+            <div class="cate">
+                <div class="cate-pic">
+                    <img src="images/p12-maglev-1.png" alt="科学仪器与设备">
+                    <span class="badge">03</span>
+                </div>
+                <div class="cate-body">
+                    <div class="cat">SCIENTIFIC INSTRUMENTS &amp; EQUIPMENT</div>
+                    <h3>科学仪器与设备</h3>
+                    <p>面向科研与高端检测需求，提供磁悬浮转子刚度测试仪、微纳三维金属加工设备与智能多芯线缆测试仪，服务于人工心脏、微纳制造与复杂装备检测。</p>
+                    <div class="links">
+                        <a href="products/magnetic-levitation-stiffness-tester.html">磁悬浮转子三维刚度测试仪</a>
+                        <a href="products/micro-nano-3d-metal-printer.html">微纳三维金属加工设备</a>
+                        <a href="products/smart-multi-core-cable-tester.html">智能多芯线缆测试仪</a>
+                    </div>
+                    <a class="btn btn-green" href="products.html#cat3">了解更多</a>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:56px;">
+                <a class="btn btn-green" href="products.html">查看全部产品</a>
             </div>
         </div>
     </section>
@@ -352,22 +347,36 @@
                 <h2>新闻中心</h2>
                 <p>共享前沿资讯 · 促进行业发展</p>
             </div>
-            <div class="news-grid">
-                <div class="news-card">
-                    <div class="date">2021</div>
-                    <h3><a href="about.html">上海复乐思仪器有限公司正式成立</a></h3>
-                    <p>公司成立于2021年，专注于单台设备和组件开发，综合多领域技术提供高性价比系统集成解决方案。</p>
+            <div class="news-tabs">
+                <button class="on" type="button" data-cat="corp">企业新闻</button>
+                <button type="button" data-cat="industry">行业动态</button>
+                <button type="button" data-cat="tech">技术交流</button>
+            </div>
+            <div class="news-list">
+                <div class="nl-item" data-cat="corp">
+                    <div class="nl-date"><div class="d">16</div><div class="ym">2026-04</div></div>
+                    <div class="nl-body">
+                        <h4><a href="news.html"><span class="tag">企业新闻</span>上海复乐思仪器有限公司正式成立</a></h4>
+                        <p>公司成立于2021年，专注于单台设备和组件开发，综合多领域技术提供高性价比系统集成解决方案。</p>
+                    </div>
                 </div>
-                <div class="news-card">
-                    <div class="date">产品动态</div>
-                    <h3><a href="products/micro-nano-3d-metal-printer.html">微纳三维金属加工设备研发成功</a></h3>
-                    <p>微米/亚微米级3D增材制造，室温大气环境直接成型，服务于高密度IC探针卡与脑机接口微电极。</p>
+                <div class="nl-item" data-cat="industry">
+                    <div class="nl-date"><div class="d">28</div><div class="ym">2026-08</div></div>
+                    <div class="nl-body">
+                        <h4><a href="news.html#industry"><span class="tag">行业动态</span>半导体测试探针自动化装备迎来新机遇</a></h4>
+                        <p>随着半导体封装测试规模扩大，探针卡植针、针压测试等精密装备需求持续增长，机器视觉与精密运动控制成为关键。</p>
+                    </div>
                 </div>
-                <div class="news-card">
-                    <div class="date">技术突破</div>
-                    <h3><a href="products/probe-force-tester.html">全自动探针针压测试仪</a></h3>
-                    <p>基于Excel坐标输入与视觉图像识别，实现高效准确的探针卡全自动针压测量，三维图形输出。</p>
+                <div class="nl-item" data-cat="tech">
+                    <div class="nl-date"><div class="d">05</div><div class="ym">2026-08</div></div>
+                    <div class="nl-body">
+                        <h4><a href="news.html#tech"><span class="tag">技术交流</span>微纳三维金属加工设备研发成功</a></h4>
+                        <p>微米/亚微米级3D增材制造，室温大气环境直接成型，服务于高密度IC探针卡与脑机接口微电极。</p>
+                    </div>
                 </div>
+            </div>
+            <div style="text-align:center; margin-top:34px;">
+                <a class="btn btn-green" href="news.html">查看更多资讯</a>
             </div>
         </div>
     </section>
@@ -396,6 +405,14 @@
                         <li><a href="products.html#cat1">智能化高精度加工检测设备</a></li>
                         <li><a href="products.html#cat2">专用控制板卡与工业控制软件</a></li>
                         <li><a href="products.html#cat3">科学仪器与设备</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>新闻中心</h4>
+                    <ul>
+                        <li><a href="news.html">企业新闻</a></li>
+                        <li><a href="news.html#industry">行业动态</a></li>
+                        <li><a href="news.html#tech">技术交流</a></li>
                     </ul>
                 </div>
                 <div>
