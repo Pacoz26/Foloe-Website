@@ -157,18 +157,6 @@ def header(title, keywords, active="products", crumb=""):
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<div class="topbar">
-    <div class="container">
-        <div class="slogan"><b>精密制造 · 智能检测 · 科学仪器</b><span>致力于成为高端智能装备解决方案提供商</span></div>
-        <div class="right">
-            <span class="lang"><span class="cn">中文</span> | EN</span>
-            <form class="search" action="../search.html" method="get">
-                <input type="text" name="q" placeholder="产品搜索">
-                <button type="submit">搜索</button>
-            </form>
-        </div>
-    </div>
-</div>
 <header class="header">
     <div class="container">
         <nav class="navbar">
@@ -222,6 +210,13 @@ def header(title, keywords, active="products", crumb=""):
                 </li>
                 <li><a href="../contact.html">联系我们</a></li>
             </ul>
+            <div class="nav-right">
+                <span class="lang"><span class="cn">中文</span> | EN</span>
+                <form class="search" action="../search.html" method="get">
+                    <input type="text" name="q" placeholder="产品搜索">
+                    <button type="submit">搜索</button>
+                </form>
+            </div>
         </nav>
     </div>
 </header>

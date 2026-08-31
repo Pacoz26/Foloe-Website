@@ -7,23 +7,9 @@
     <title>联系我们 - 上海复乐思仪器有限公司</title>
     <meta name="description" content="联系上海复乐思仪器有限公司：电话、邮箱、地址等联系方式。">
     <meta name="keywords" content="上海复乐思仪器有限公司,联系我们,联系方式">
-    <link rel="stylesheet" href="./contact_files/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- ===== 顶部通栏 ===== -->
-    <div class="topbar">
-        <div class="container">
-            <div class="slogan"><b>精密制造 · 智能检测 · 科学仪器</b><span>致力于成为高端智能装备解决方案提供商</span></div>
-            <div class="right">
-                <span class="lang"><span class="cn">中文</span> | EN</span>
-                <form class="search" action="search.html" method="get">
-                    <input type="text" name="q" placeholder="产品搜索">
-                    <button type="submit">搜索</button>
-                </form>
-            </div>
-        </div>
-    </div>
 
     <!-- ===== 导航 ===== -->
     <header class="header">
@@ -81,6 +67,13 @@
                     </li>
                     <li class="active"><a href="contact.html">联系我们</a></li>
                 </ul>
+                <div class="nav-right">
+                    <span class="lang"><span class="cn">中文</span> | EN</span>
+                    <form class="search" action="search.html" method="get">
+                        <input type="text" name="q" placeholder="产品搜索">
+                        <button type="submit">搜索</button>
+                    </form>
+                </div>
             </nav>
         </div>
     </header>
@@ -174,45 +167,6 @@
         </div>
     </footer>
 
-    <script src="./contact_files/main.js.下载"></script>
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-
-
-</body></html>
+    <script src="js/main.js"></script>
+</body>
+</html>
