@@ -172,7 +172,7 @@ def header(title, keywords, active="products", crumb=""):
 <header class="header">
     <div class="container">
         <nav class="navbar">
-            <a class="logo" href="../foloe.html">
+            <a class="logo" href="../index.html">
                 <span class="brand-text">
                     <span class="cn">上海复乐思仪器有限公司</span>
                     <span class="en">Shanghai Foloe Instrument Co., Ltd.</span>
@@ -180,7 +180,7 @@ def header(title, keywords, active="products", crumb=""):
             </a>
             <button class="nav-toggle" aria-label="切换导航"><span></span><span></span><span></span></button>
             <ul class="nav-menu">
-                <li><a href="../foloe.html">首页</a></li>
+                <li><a href="../index.html">首页</a></li>
                 <li class="has-sub">
                     <a href="../about.html">关于我们 <span class="caret">▾</span></a>
                     <ul class="dropdown">
@@ -283,7 +283,8 @@ def footer():
             </div>
         </div>
         <div class="bottom">
-            Copyright © 2026 上海复乐思仪器有限公司 All Rights Reserved. | <a href="https://beian.miit.gov.cn/">沪ICP备2023010105号</a>
+            <span>Copyright © 2026 上海复乐思仪器有限公司 All Rights Reserved.</span>
+            <a href="https://beian.miit.gov.cn/" class="beian-link"><img src="../images/logopolice.png" alt="备案图标" class="beian-icon">沪ICP备2023010105号</a>
         </div>
     </div>
 </footer>
@@ -322,7 +323,7 @@ def gen_page(p):
     cat_name = CATS[cat]
     rows = "".join('<tr><th>{0}</th><td>{1}</td></tr>'.format(k, v) for k, v in params)
     app_li = "".join('<li>{0}</li>'.format(a) for a in apps)
-    crumb = '<a href="../foloe.html">首页</a> &gt; <a href="../products.html">产品中心</a> &gt; <a href="../products.html#cat{0}">{1}</a> &gt; {2}'.format(cat, cat_name, name)
+    crumb = '<a href="../index.html">首页</a> &gt; <a href="../products.html">产品中心</a> &gt; <a href="../products.html#cat{0}">{1}</a> &gt; {2}'.format(cat, cat_name, name)
 
     html = header(name, name) + banner(name, crumb) + """
 <div class="container">

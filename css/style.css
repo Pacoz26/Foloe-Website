@@ -590,13 +590,21 @@ h1, h2, h3, h4, h5 { color: var(--ink); line-height: 1.3; }
 .footer .contact li .k { color: #b9e6d0; flex: 0 0 40px; }
 .footer .bottom {
     border-top: 1px solid rgba(255, 255, 255, .1);
-    padding: 20px 0;
+    padding: 18px 10px;
     text-align: center;
     font-size: 13px;
     background: var(--footer-2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4px 10px;
+    line-height: 1.6;
 }
 .footer .bottom a { color: #929293; }
 .footer .bottom a:hover { color: #fff; }
+.footer .bottom .beian-link { display: inline-flex; align-items: center; }
+.footer .bottom .beian-icon { height: 16px; width: auto; margin-right: 4px; }
 
 /* ---------- 内页页头 ---------- */
 .page-banner {
