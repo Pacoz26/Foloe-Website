@@ -503,8 +503,7 @@ h1, h2, h3, h4, h5 { color: var(--ink); line-height: 1.3; }
     align-items: center;
     gap: 30px 50px;
 }
-.partners .strip img { max-height: 52px; width: auto; object-fit: contain; filter: grayscale(1); opacity: .75; transition: all .25s ease; }
-.partners .strip img:hover { filter: grayscale(0); opacity: 1; }
+.partners .strip img { max-height: 52px; width: auto; object-fit: contain; }
 
 /* ---------- 新闻 ---------- */
 .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
