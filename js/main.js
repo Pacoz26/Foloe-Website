@@ -64,6 +64,18 @@
     });
 })();
 
+// 产品详情页：加载后滚动到产品标题（卡片顶部），避免停留在顶部横幅
+(function () {
+    var card = document.querySelector('.pd-wrap');
+    if (!card) return;
+    var title = card.parentElement ? card.parentElement.querySelector('.mc-title') : null;
+    var target = title || card;
+    var header = document.querySelector('.header');
+    var offset = header ? header.offsetHeight : 76;
+    var y = target.getBoundingClientRect().top + window.scrollY - offset - 16;
+    window.scrollTo({ top: Math.max(0, y), left: 0, behavior: 'instant' });
+})();
+
 function switchImage(elem, className) {
     var mainImg = document.getElementById('mainImage');
     mainImg.src = elem.getAttribute('data-full');
