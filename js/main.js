@@ -63,3 +63,9 @@
         });
     });
 })();
+
+function switchImage(elem, className) {
+    var mainImg = document.getElementById('mainImage');
+    mainImg.src = elem.getAttribute('data-full');
+    mainImg.className = className;
+}

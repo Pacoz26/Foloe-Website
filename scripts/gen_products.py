@@ -262,20 +262,35 @@ def footer():
 def sidebar(cur_cat, cur_key):
     rows = []
     for cat_id in (1, 2, 3):
-        rows.append('<li><a href="../products.html#cat{0}"{1}>{2}</a></li>'.format(
-            cat_id, ' class="on"' if cat_id == cur_cat else '', CATS[cat_id]))
-    return '<aside class="side"><div class="side-title">产品中心</div><ul>{}</ul></aside>'.format("".join(rows))
+        rows.append('<li>')
+        rows.append('<a class="cat-link" href="../products.html#cat{0}">{1}</a>'.format(cat_id, CATS[cat_id]))
+        rows.append('<ul class="side-sub">')
+        for p in PRODUCTS:
+            if p[2] == cat_id:
+                key, name = p[0], p[1]
+                cls = ' class="cur"' if key == cur_key else ''
+                rows.append('<li><a{0} href="{1}.html">{2}</a></li>'.format(cls, key, name))
+        rows.append('</ul>')
+        rows.append('</li>')
+    return '<aside class="side"><div class="side-title">产品中心</div><ul class="side-root">{}</ul></aside>'.format("".join(rows))
 
 
-def gallery(images, name):
+def gallery(key, images, name):
     if not images:
         return ""
-    imgs = ['<img src="../images/{0}" alt="{1}">'.format(i, name) for i in images]
-    main = imgs[0]
-    thumbs = []
-    for idx, i in enumerate(images):
-        on = ' on' if idx == 0 else ''
-        thumbs.append('<img src="../images/{0}" alt="{1}" class="{2}" data-full="../images/{0}">'.format(i, name, on.strip()))
+    if key == "thermal-compression-bonding-module":
+        main = '<img id="mainImage" src="../images/{0}" alt="{1}" class="pos-1">'.format(images[0], name)
+        thumbs = []
+        for idx, i in enumerate(images):
+            on = ' on' if idx == 0 else ''
+            thumbs.append('<img src="../images/{0}" alt="{1}" class="{2}" data-full="../images/{0}" onclick="switchImage(this, \'pos-{3}\')">'.format(
+                i, name, on.strip(), idx + 1))
+    else:
+        main = '<img src="../images/{0}" alt="{1}">'.format(images[0], name)
+        thumbs = []
+        for idx, i in enumerate(images):
+            on = ' on' if idx == 0 else ''
+            thumbs.append('<img src="../images/{0}" alt="{1}" class="{2}" data-full="../images/{0}">'.format(i, name, on.strip()))
     return """
 <div class="pd-gallery">
     <div class="main-pic">{main}</div>
@@ -317,7 +332,7 @@ def gen_page(p):
     </div>
 </div>
 """.format(side=sidebar(cat, key), name=name, cat_name=cat_name,
-           gallery=gallery(images, name), summary=summary, rows=rows, app_li=app_li)
+           gallery=gallery(key, images, name), summary=summary, rows=rows, app_li=app_li)
     html += footer()
     with open(os.path.join(PDIR, key + ".html"), "w", encoding="utf-8") as f:
         f.write(html)
