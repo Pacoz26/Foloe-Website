@@ -64,7 +64,7 @@
     });
 })();
 
-// 产品详情页：加载后滚动到产品标题（卡片顶部），避免停留在顶部横幅
+// 产品详情页
 (function () {
     var card = document.querySelector('.pd-wrap');
     if (!card) return;
