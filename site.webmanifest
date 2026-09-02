@@ -1,0 +1,12 @@
+{
+  "name": "上海复乐思仪器有限公司",
+  "short_name": "复乐思",
+  "description": "精密制造 · 智能检测 · 科学仪器",
+  "icons": [
+    { "src": "images/logo-white.png", "sizes": "344x335", "type": "image/png" }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#015e3c",
+  "background_color": "#ffffff"
+}
