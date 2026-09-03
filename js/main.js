@@ -18,6 +18,21 @@
             }
         });
     });
+    // 点击菜单外区域时关闭移动端菜单
+    document.addEventListener('click', function (e) {
+        if (!menu || !menu.classList.contains('open')) return;
+        var header = document.querySelector('.header');
+        if (header && !header.contains(e.target)) {
+            menu.classList.remove('open');
+        }
+    });
+    // 窗口放大到桌面尺寸时复位移动端状态
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 768 && menu) {
+            menu.classList.remove('open');
+            menu.querySelectorAll('.dropdown.show').forEach(function (d) { d.classList.remove('show'); });
+        }
+    });
 })();
 
 // 数字滚动动画
