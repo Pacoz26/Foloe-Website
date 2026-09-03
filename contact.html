@@ -91,13 +91,7 @@
                         </div>
                     </div>
                     <div class="map-box">
-                        <iframe 
-                            width="600" height="450" 
-                            style="border:0; width:100%;" 
-                            loading="lazy" 
-                            src="https://ditu.amap.com/ssr/embed/place?id=B0KGPKT263&amp;name=%E5%A4%8D%E8%A5%84%E5%85%AC%E7%A4%BE4%E5%8F%B7%E6%A5%BC&amp;lng=121.271191&amp;lat=31.193622&amp;address=%E5%8F%8C%E8%81%94%E8%B7%AF168%E5%8F%B72%E5%8F%B7%E6%A5%BC%E5%A4%8D%E8%A5%84%E5%85%AC%E7%A4%BE&amp;zoom=16&amp;source=poi_detail&amp;platform=pc" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                        <div id="map" style="width:100%; height:450px;"></div>
                     </div>
                 </div>
             </main>
@@ -145,5 +139,29 @@
     </footer>
 
     <script src="js/main.js"></script>
+
+    <script src="placeholder"></script>
+    <script>
+        (function () {
+            var el = document.getElementById('map');
+            if (!el || typeof T === 'undefined') return;
+
+            var POI = new T.LngLat(121.266756, 31.195653);
+
+            var map = new T.Map(el);
+            map.centerAndZoom(POI, 16);
+
+            var marker = new T.Marker(POI);
+            map.addOverLay(marker);
+
+            var infoWin = new T.InfoWindow(
+                '上海复乐思仪器有限公司<br>上海市青浦区双联路168号复襄公社4号楼108室'
+            );
+            marker.addEventListener('click', function () {
+                map.openInfoWindow(infoWin, marker.getLngLat());
+            });
+        })();
+    </script>
+    <!-- TODO: 申请天地图 API Key 后，填入上面 <script src="...&tk="> 的 tk= 参数 -->
 </body>
 </html>
