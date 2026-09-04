@@ -274,7 +274,7 @@ def sidebar(cur_cat, cur_key):
                 rows.append('<li><a{0} href="{1}.html">{2}</a></li>'.format(cls, key, name))
         rows.append('</ul>')
         rows.append('</li>')
-    return '<aside class="side"><div class="side-title">产品中心</div><ul class="side-root">{}</ul></aside>'.format("".join(rows))
+    return '<aside class="side"><a class="side-title" href="../products.html">产品中心</a><ul class="side-root">{}</ul></aside>'.format("".join(rows))
 
 
 def gallery(key, images, name):
