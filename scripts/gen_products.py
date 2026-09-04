@@ -267,11 +267,16 @@ def sidebar(cur_cat, cur_key):
         rows.append('<li>')
         rows.append('<a class="cat-link" href="../products.html#cat{0}">{1}</a>'.format(cat_id, CATS[cat_id]))
         rows.append('<ul class="side-sub">')
-        for p in PRODUCTS:
-            if p[2] == cat_id:
-                key, name = p[0], p[1]
-                cls = ' class="cur"' if key == cur_key else ''
-                rows.append('<li><a{0} href="{1}.html">{2}</a></li>'.format(cls, key, name))
+        items = [p for p in PRODUCTS if p[2] == cat_id]
+        # 将当前产品固定到第 2 位，切换产品时避免菜单上下滚动
+        cur_idx = next((i for i, p in enumerate(items) if p[0] == cur_key), None)
+        if cur_idx is not None and cur_idx != 1:
+            item = items.pop(cur_idx)
+            items.insert(1, item)
+        for p in items:
+            key, name = p[0], p[1]
+            cls = ' class="cur"' if key == cur_key else ''
+            rows.append('<li><a{0} href="{1}.html">{2}</a></li>'.format(cls, key, name))
         rows.append('</ul>')
         rows.append('</li>')
     return '<aside class="side"><div class="side-title">产品中心</div><ul class="side-root">{}</ul></aside>'.format("".join(rows))
