@@ -91,6 +91,28 @@
     window.scrollTo({ top: Math.max(0, y), left: 0, behavior: 'instant' });
 })();
 
+// 产品详情页左侧菜单：将当前高亮产品滑动到第二位（第一位为“产品中心”标题）
+(function () {
+    var side = document.querySelector('.side');
+    if (!side) return;
+    var cur = side.querySelector('a.cur');
+    if (!cur) return;
+    function scrollToCurrent() {
+        var title = side.querySelector('.side-title');
+        var titleH = title ? title.offsetHeight : 0;
+        var relTop = cur.getBoundingClientRect().top - side.getBoundingClientRect().top + side.scrollTop;
+        var desired = relTop - titleH;
+        var max = side.scrollHeight - side.clientHeight;
+        if (desired > max) {
+            side.scrollTop = max; // 无法达到第二位时滑到底部
+        } else {
+            side.scrollTop = Math.max(0, desired);
+        }
+    }
+    scrollToCurrent();
+    window.addEventListener('load', scrollToCurrent);
+})();
+
 function switchImage(elem, className) {
     var mainImg = document.getElementById('mainImage');
     mainImg.src = elem.getAttribute('data-full');

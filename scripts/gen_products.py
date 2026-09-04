@@ -263,19 +263,15 @@ def footer():
 
 def sidebar(cur_cat, cur_key):
     rows = []
-    # 当前产品固定显示在整个左菜单的第 2 位（第 1 位为“产品中心”标题），
-    # 切换产品时高亮条目位置固定，无需上下滚动。
-    cur_p = next((p for p in PRODUCTS if p[0] == cur_key), None)
-    if cur_p:
-        rows.append('<li><a class="cur" href="{0}.html">{1}</a></li>'.format(cur_p[0], cur_p[1]))
     for cat_id in (1, 2, 3):
         rows.append('<li>')
         rows.append('<a class="cat-link" href="../products.html#cat{0}">{1}</a>'.format(cat_id, CATS[cat_id]))
         rows.append('<ul class="side-sub">')
         for p in PRODUCTS:
-            if p[2] == cat_id and p[0] != cur_key:
+            if p[2] == cat_id:
                 key, name = p[0], p[1]
-                rows.append('<li><a href="{0}.html">{1}</a></li>'.format(key, name))
+                cls = ' class="cur"' if key == cur_key else ''
+                rows.append('<li><a{0} href="{1}.html">{2}</a></li>'.format(cls, key, name))
         rows.append('</ul>')
         rows.append('</li>')
     return '<aside class="side"><div class="side-title">产品中心</div><ul class="side-root">{}</ul></aside>'.format("".join(rows))
