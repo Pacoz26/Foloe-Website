@@ -113,6 +113,58 @@
     window.addEventListener('load', scrollToCurrent);
 })();
 
+// 产品主图：悬停 0.5s 显示“点击可放大”，点击后放大查看（周围变暗）
+(function () {
+    var mainPic = document.querySelector('.pd-gallery .main-pic');
+    if (!mainPic) return;
+    var mainImg = mainPic.querySelector('img');
+    if (!mainImg) return;
+
+    // 悬停提示
+    var tip = document.createElement('div');
+    tip.className = 'pd-main-tip';
+    tip.textContent = '点击可放大';
+    mainPic.appendChild(tip);
+    var tipTimer = null;
+    mainImg.addEventListener('mouseenter', function () {
+        tipTimer = setTimeout(function () { tip.classList.add('show'); }, 500);
+    });
+    mainImg.addEventListener('mouseleave', function () {
+        if (tipTimer) { clearTimeout(tipTimer); tipTimer = null; }
+        tip.classList.remove('show');
+    });
+
+    // 点击放大（灯箱）
+    var lightbox = document.createElement('div');
+    lightbox.className = 'pd-lightbox';
+    var lbImg = document.createElement('img');
+    lbImg.alt = mainImg.alt || '';
+    var lbClose = document.createElement('span');
+    lbClose.className = 'pd-lightbox-close';
+    lbClose.textContent = '×';
+    lbClose.setAttribute('aria-label', '关闭');
+    lightbox.appendChild(lbClose);
+    lightbox.appendChild(lbImg);
+    document.body.appendChild(lightbox);
+
+    function open() {
+        lbImg.src = mainImg.src;
+        lightbox.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+    function close() {
+        lightbox.classList.remove('show');
+        document.body.style.overflow = '';
+    }
+    mainImg.addEventListener('click', open);
+    lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox || e.target === lbClose) close();
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('show')) close();
+    });
+})();
+
 function switchImage(elem, className) {
     var mainImg = document.getElementById('mainImage');
     mainImg.src = elem.getAttribute('data-full');
